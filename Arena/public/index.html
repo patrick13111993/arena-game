@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script src="socket.io/socket.io.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous"></script>
+    <script src="https://code.createjs.com/1.0.0/easeljs.min.js"></script>
+    <script src="https://code.createjs.com/1.0.0/preloadjs.min.js"></script>
+    <script src="https://code.createjs.com/1.0.0/soundjs.min.js"></script>
+</head>
+<body>
+<div id="chatroom">
+    <div id="regpanel">
+        <p id="regmessage">Register your nickname:</p>
+        <form id="regform" action="">
+            <input id="nickname" /><button>Send</button>
+        </form>
+    </div>
+    <div id="messagepanel">
+        <ul id="userlist"></ul>
+        <ul id="messages"></ul>
+        <button id="startgamebutton" class="gamebutton">Start Game</button>
+        <form id="form" action="">
+            To:&nbsp;<span id="activetarget">Everyone</span><input id="input" autocomplete="off" /><button>Send</button>
+        </form>
+    </div>
+</div>
+<div id="game" hidden="true">
+    <span id="datarate"></span><span id="fps"></span><span id="score">Score: 0</span><span id="gameover" hidden="true">Game Over!</span>
+    <canvas id="easelcan" width="900" height="500"></canvas>
+</div>
+</body>
+<script src="./js/main.js"></script>
+<script src="./js/chatroom.js"></script>
+</html>

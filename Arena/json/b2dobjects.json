@@ -1,0 +1,24 @@
+[
+    {
+        "name": "wall",
+        "parameters": {
+                "objid": "wall",
+                "density": 1,
+                "friction": 0.2,
+                "restitution": 1.0,
+                "isstatic": true,
+                "iscircle": false
+        }
+    },
+  {
+    "name": "player",
+    "parameters": {
+      "objid": "player",
+      "density": 1,
+      "friction": 0,
+      "restitution": 1.0,
+      "isstatic": false,
+      "iscircle": true
+    }
+  }
+]
